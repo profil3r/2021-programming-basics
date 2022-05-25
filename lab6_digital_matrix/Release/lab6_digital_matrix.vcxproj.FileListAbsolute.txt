@@ -1,0 +1,2 @@
+C:\Users\Николай\Desktop\ГУАП\2022_05 - Зимний семестр\2021_12 - Основы программирования - Зачёт\6 - Обработка числовых матриц\project\lab6_digital_matrix\Release\lab6_digital_matrix.exe
+C:\Users\Николай\Desktop\ГУАП\2022_05 - Зимний семестр\2021_12 - Основы программирования - Зачёт\6 - Обработка числовых матриц\Решение\project\lab6_digital_matrix\Release\lab6_digital_matrix.exe

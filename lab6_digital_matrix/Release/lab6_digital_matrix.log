@@ -1,0 +1,9 @@
+﻿  lab6_digital_matrix.cpp
+C:\Users\Николай\Desktop\ГУАП\2022_05 - Зимний семестр\2021_12 - Основы программирования - Зачёт\6 - Обработка числовых матриц\Решение\project\lab6_digital_matrix\lab6_digital_matrix.cpp(36,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Николай\Desktop\ГУАП\2022_05 - Зимний семестр\2021_12 - Основы программирования - Зачёт\6 - Обработка числовых матриц\Решение\project\lab6_digital_matrix\lab6_digital_matrix.cpp(219,18): warning C4326: возвращаемый тип "main" должен быть "int", а не "short"
+  Создание кода
+  1 of 17 functions ( 5.9%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  lab6_digital_matrix.vcxproj -> C:\Users\Николай\Desktop\ГУАП\2022_05 - Зимний семестр\2021_12 - Основы программирования - Зачёт\6 - Обработка числовых матриц\Решение\project\lab6_digital_matrix\Release\lab6_digital_matrix.exe

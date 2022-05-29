@@ -16,7 +16,7 @@ string func_reverse_string(const string main_string, const short int reverse_met
 {
     string reversed_string; //перевернутая строка
     short int len = main_string.length(); //переменная длины строки
-    short int n = len - 1; //длина исходной строки минус 1, данная переменная используется в качестве счетчика в циклах
+    short int n = len - 1; //длина исходной строки минус 1, данная переменная используется в качестве счетчика последнего символа в циклах
     short int i = 0; // счтёчик цикла
     char temp_char; // переменная временного символа
     reversed_string.reserve(main_string.length()); //выделение памяти для переменной reversed_string длиною строки main_string
@@ -98,7 +98,7 @@ int main()
     short int string_len_ifrandom;                  //длина строки, если строка заполняется рандомно
     short int reverse_method;                       //выбор типа метода пеерстановки символов
     string main_string;                             //строковая переменная, содержащая главную строку
-    string reversed_string;                         //переменная для перевернутой строки
+    string reversed_string;                         //переменная для инвертированный строки
     
 
     //приветственное сообщение
@@ -112,7 +112,9 @@ int main()
             cout << "[OUT]\tPlease enter type of string filling (please enter only digit):\n\t[1] Randomising string\n\t[2] Manually\n\t[3] Exit\n[INPUT]\tPlease make your choise: ";
             cin >> string_fill_type;
             //если введено 1 или 2, то прервать цикл
-            if (string_fill_type == 1 or string_fill_type == 2 or string_fill_type == 3)
+            if (string_fill_type == 1 or 
+                string_fill_type == 2 or 
+                string_fill_type == 3)
                 break;
             if (!cin) cin_rescue();
             cerr << "[ERROR]\tPlease enter correct data\n";
@@ -126,7 +128,7 @@ int main()
             {
                 cout << "[INPUT]\tPlease enter random string length (limits: from "<< LIMIT_len_min <<" to "<< LIMIT_len_max <<"): ";
                 cin >> string_len_ifrandom;
-                //если строка болье или равна 2 и меньше или равно
+                //если строка болье или равна минимальному литиу и меньше или равно максимальному лимиту
                 if (string_len_ifrandom >= LIMIT_len_min and
                     string_len_ifrandom <= LIMIT_len_max)
                     break;
@@ -146,6 +148,7 @@ int main()
                 if (main_string.length() >= LIMIT_len_min and
                     main_string.length() <= LIMIT_len_max)
                     break;
+                if (!cin) cin_rescue();
                 cerr << "[ERROR]\tPlease enter correct string\n";
             }
         //выйти из программы
@@ -155,6 +158,7 @@ int main()
         //ввод типа метода перестановки
         while (true)
         {
+            //рендер выбора
             cout << "[OUT]\tAvailable methods:" << endl; 
             cout << "\t[1] pushback" << endl; 
             cout << "\t[2] swap (over FOR cirlce)" << endl;
@@ -162,14 +166,18 @@ int main()
             cout << "\t[4] using temporary char" << endl;
             cout << "[INPUT]\tPlease choose reverse method (only digit) : "; 
             cin >> reverse_method;
+            //проверка выбора
             if (reverse_method == 1 or 
                 reverse_method == 2 or 
                 reverse_method == 3 or 
                 reverse_method == 4)
                 break;
+            //обработка ошибочного ввода
+            if (!cin) cin_rescue();
             cerr << "[ERROR]\tPlease enter correct data\n";
         }
-    
+        
+        //вызов функции реверсирования (передаются: строка и метод реверсирования)
         reversed_string = func_reverse_string(main_string, reverse_method);
         cout << "[OUT]\tReversed string:" << reversed_string << endl;
 
@@ -177,6 +185,7 @@ int main()
         cout << "[OUT]\tComparing" << endl;
         cout << "[OUT]\tOriginal string:\t" << main_string << endl;
         cout << "[OUT]\tReversed string:\t" << reversed_string << endl; 
+        //пауза (не очень хороший метод приостановить работу ПО, тк не кроссплатформенный)
         system("pause");
     }
 }
